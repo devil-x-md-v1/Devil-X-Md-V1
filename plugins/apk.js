@@ -6,7 +6,7 @@ cmd(
     pattern: "apk",
     alias: ["android", "af"],
     react: "📍",
-    desc: "DOWNLOAD ANY APKS | DEVIL X MD",
+    desc: "👀 DOWNLOAD ANY APKS | DEVIL X MD 👀",
     category: "download",
     filename: __filename,
   },
@@ -47,7 +47,7 @@ cmd(
         { quoted: mek }
       );
 
-      await test.sendMessage(from, { react: { text: "✅", key: mek.key } });
+      await test.sendMessage(from, { react: { text: "👿", key: mek.key } });
     } catch (err) {
       console.error("❌ APK Downloader Error:", err);
       reply("❌ *An error occurred while downloading the APK.*");
