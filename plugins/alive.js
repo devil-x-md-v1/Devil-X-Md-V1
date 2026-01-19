@@ -2,7 +2,7 @@ const { cmd, commands } = require('../command');
 const config = require('../config');
 cmd({
     pattern: "alive",
-    desc: "CHECK DEVIL X MD ONLINE OR OFFLINE",
+    desc: "👻 CHECK DEVIL X MD ONLINE OR OFFLINE 👻",
     category: "main",
     filename: __filename
 },
