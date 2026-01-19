@@ -107,7 +107,7 @@ async function connectToWA() {
 
       const up = `DEVIL-X-MD SUCCESSFULLY CONNECTED ✅\n\nPREFIX: ${prefix}`;
       await test.sendMessage(ownerNumber[0] + "@s.whatsapp.net", {
-        image: { url: `https://github.com/devil-x-md-v1/Devil-X-Md-V1/blob/main/ChatGPT%20Image%20Jan%2019,%202026,%2009_33_24%20PM.png?raw=true` },
+        image: { url: `https://github.com/devil-x-md-v1/Devil-X-Md-V1/blob/main/images/ChatGPT%20Image%20Jan%2019,%202026,%2009_33_24%20PM.png?raw=true` },
         caption: up
       });
 
