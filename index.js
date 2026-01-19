@@ -39,7 +39,7 @@ const app = express();
 const port = process.env.PORT || 8000;
 
 const prefix = '.';
-const ownerNumber = ['94776121326'];
+const ownerNumber = ['94784167385'];
 const credsPath = path.join(__dirname, '/auth_info_baileys/creds.json');
 
 async function ensureSessionFile() {
@@ -107,7 +107,7 @@ async function connectToWA() {
 
       const up = `DEVIL-X-MD SUCCESSFULLY CONNECTED ✅\n\nPREFIX: ${prefix}`;
       await test.sendMessage(ownerNumber[0] + "@s.whatsapp.net", {
-        image: { url: `https://github.com/testwpbot/test12/blob/main/images/Danuwa%20-%20MD.png?raw=true` },
+        image: { url: `https://github.com/devil-x-md-v1/Devil-X-Md-V1/blob/main/ChatGPT%20Image%20Jan%2019,%202026,%2009_33_24%20PM.png?raw=true` },
         caption: up
       });
 
