@@ -1,9 +1,8 @@
 const { cmd } = require("../command");
 const fetch = require("node-fetch");
 
-// 🔑 Put your Bing API key here (Sinhala)
-const BING_KEY = "e0dfa855cbebb1df6314162d17b179516a02fcd6377008e9000de9ff730b95e1";
-const BING_ENDPOINT = "https://api.bing.microsoft.com/v7.0/images/search";
+// 🔑 Put your Pexels API key here
+const PEXELS_KEY = "quQVT5O0l8OgLnx4Ye4oSraVCKjHYzCyzFLVoesuLVqZZj1NSCa5O0FR";
 
 // Pending session (for future upgrades like next/prev)
 const pendingImgSearch = {};
@@ -21,28 +20,28 @@ cmd({
   reply("*🖼️ Searching images...*");
 
   try {
-    // Fetch images from Bing API
-    const res = await fetch(`${BING_ENDPOINT}?q=${encodeURIComponent(q)}&count=6`, {
-      headers: { "Ocp-Apim-Subscription-Key": BING_KEY }
+    // Fetch images from Pexels API
+    const res = await fetch(`https://api.pexels.com/v1/search?query=${encodeURIComponent(q)}&per_page=6`, {
+      headers: { Authorization: PEXELS_KEY }
     });
     const data = await res.json();
 
-    if (!data.value || !data.value.length) {
+    if (!data.photos || !data.photos.length) {
       return reply("*❌ No images found!*");
     }
 
     // Save pending session (optional)
     pendingImgSearch[sender] = {
       keyword: q,
-      results: data.value,
+      results: data.photos,
       timestamp: Date.now()
     };
 
-    // Send images with English captions
-    for (let i = 0; i < data.value.length; i++) {
-      const img = data.value[i];
+    // Send images with captions
+    for (let i = 0; i < data.photos.length; i++) {
+      const img = data.photos[i];
       await danuwa.sendMessage(from, {
-        image: { url: img.contentUrl },
+        image: { url: img.src.original },
         caption: `🖼️ DEVIL X MD | IMG SEARCH CMD\nSearch keyword: ${q}\nImage #${i+1}`
       }, { quoted: mek });
     }
