@@ -1,0 +1,30 @@
+{
+  "name": "DEVIL-X-MD",
+  "description": "DEVIL X MD POWERFULL WHATSAPP BOT MADE BY SASANKA CHAMUTH",
+  "logo": "https://github.com/devil-x-md-v1/Devil-X-Md-V1/blob/main/ChatGPT%20Image%20Jan%2019,%202026,%2009_33_24%20PM.png?raw=true",
+  "keywords": ["DEVIL-X-MD"],
+  "success_url": "/",
+
+  "env": {
+    "SESSION_ID": {
+      "description": "Put the session-id here.",
+      "required": true
+    },  
+
+    "ALIVE_IMG": {
+      "description": "Put your alive img here.",
+      "required": true
+    },
+    
+    "ALIVE_MSG": {
+      "description": "Put your alive msg here.",
+      "required": true
+    }   
+},
+     "buildpacks": [
+        {
+            "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+        }
+     ],
+  "stack": "heroku-24"
+}
