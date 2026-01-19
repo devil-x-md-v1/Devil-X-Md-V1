@@ -127,7 +127,7 @@ module.exports = {
       const sender = key.participant || from;
 
       let caption =
-`🗑️ *DELETE MSG RECOVERD | DEVIL X MD*
+`🗑️ *♻️ DELETE MSG RECOVERD | DEVIL X MD ♻️*
 
 👤 *Sender:* @${sender.split('@')[0]}
 🕒 *Time:* ${new Date().toLocaleString()}`;
