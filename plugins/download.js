@@ -21,7 +21,7 @@ cmd(
   {
     pattern: "ytmp3",
     alias: ["yta", "song"],
-    desc: "DOWNLOAD YT MP3 | DEVIL X MD",
+    desc: "🍒 DOWNLOAD YT MP3 | DEVIL X MD 🍒",
     category: "download",
     filename: __filename,
   },
@@ -49,7 +49,7 @@ cmd(
         { quoted: mek }
       );
 
-      reply("⬇️ Downloading MP3...");
+      reply("⬇️ DOWNLOADING MP3 | DEVIL X MD ⬇️");
 
       const data = await ytmp3(video.url);
       if (!data?.url) return reply("❌ Failed to download MP3");
@@ -73,13 +73,13 @@ cmd(
   {
     pattern: "ytmp4",
     alias: ["ytv", "video"],
-    desc: "DOWNLOAD YT VIDEO MP4 | DEVIL X MD",
+    desc: "😶‍🌫️ DOWNLOAD YT VIDEO MP4 | DEVIL X MD 😶‍🌫️",
     category: "download",
     filename: __filename,
   },
   async (bot, mek, m, { from, q, reply }) => {
     try {
-      if (!q) return reply("🎬 Send video name or YouTube link");
+      if (!q) return reply("👀 SEND VIDEO NAME OR YT LINK 👀");
 
       reply("🔎 Searching YouTube...");
       const video = await getYoutube(q);
@@ -134,7 +134,7 @@ cmd(
   {
     pattern: "tiktok",
     alias: ["tt"],
-    desc: "DOWNLOAD TIKTOK VIDEOS \ DEVIL X MD",
+    desc: "😼 DOWNLOAD TIKTOK VIDEOS | DEVIL X MD 😼",
     category: "download",
     filename: __filename,
   },
